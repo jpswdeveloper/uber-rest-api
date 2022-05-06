@@ -22,10 +22,10 @@ mongoose.connect('mongodb+srv://ted:ted@cluster0.x78q2.mongodb.net/myfoodrecipe?
     })
 
 // Mongo DB
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json('Ted Uber Recipe APi')
 })
 app.use('/api/v1/product', productRouter)
 app.use('/api/v1/category', categoryRouter)
 // listening 
-app.listen(process.env.PORT || 3000, () => console.log(`server is running on http://localhost:${3000}/api/v1/`))
+app.listen(process.env.PORT || 8000, () => console.log(`server is running on http://localhost:${8000}/api/v1/`))
